@@ -12,10 +12,11 @@
             $p            = mysqli_fetch_object($jurusan);
         
         ?>
-              <h3 class="text-center"><?=  $p->nama ?></h3>
+              <h3 class="text-center"><a href="jurusan.php" class="black"><?=  $p->nama ?></h3>
               <img src="admin/uploads/jurusan/<?= $p->gambar ?>" width="65%" class="image">
               <?= $p->keterangan?>
         </div>
+        
     </div>
 
 <?php include 'footer.php';?>

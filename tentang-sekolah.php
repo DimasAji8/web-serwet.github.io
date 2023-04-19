@@ -6,7 +6,7 @@
        
               <h3 class="text-center">Tentang Sekolah</h3>
               <img src="admin/uploads/identitas/<?= $d->foto_sekolah ?>" width="100%" class="image">
-              <?= $d->tentang_sekolah ?>
+              <p class="tentang"><?= $d->tentang_sekolah ?></p>
         </div>
     </div>
 

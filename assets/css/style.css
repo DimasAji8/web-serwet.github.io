@@ -5,6 +5,7 @@
   padding: 0;
   font-family: "Quicksand", sans-serif;
   box-sizing: border-box;
+  list-style: none;
 }
 
 a {
@@ -13,6 +14,10 @@ a {
 
 .float-left {
   float: left;
+}
+
+.float-right {
+  float: right;
 }
 
 .container {
@@ -135,7 +140,7 @@ form {
   color: #1d9b4b;
 }
 
-.navbar {
+.navibar {
   height: 60px;
   width: 100%;
   background-color: #2e8bc0;
@@ -144,46 +149,47 @@ form {
   z-index: 1000;
 }
 
-.navbar a {
+.navibar a {
   color: #fff;
 }
-.nav-brand {
+.navi-brand {
   display: inline-block;
   padding: 15px 0;
   margin-right: 16px;
 }
 
-.nav-menu {
+.navi-menu {
   display: flex;
   list-style: none;
 }
 
-.nav-menu li a {
+.navi-menu li a {
   padding: 20px;
   display: inline-block;
 }
 
-.nav-menu li .dropdown {
+.navi-menu li .dropdown {
   border: 1px solid #ddd;
   background-color: #fff;
   list-style: none;
   position: absolute;
   display: none;
+  z-index: 1;
 }
 
-.nav-menu li:hover {
+.navi-menu li:hover {
   background-color: #145dad;
 }
 
-.nav-menu li .dropdown a {
+.navi-menu li .dropdown a {
   color: #333;
 }
 
-.nav-menu li .dropdown li:hover a {
+.navi-menu li .dropdown li:hover a {
   color: #fff;
 }
 
-.nav-menu li:hover .dropdown {
+.navi-menu li:hover .dropdown {
   display: block;
 }
 
@@ -264,6 +270,15 @@ form {
   margin-bottom: 10px;
 }
 
+.image-guru {
+  display: block;
+  float: left;
+  border: 1px solid #ddd;
+  padding: 5px;
+  margin-bottom: 10px;
+  margin-right: 50px;
+}
+
 .header {
   border-bottom: 5px solid #fdbb2d;
   background-color: #0c2d48;
@@ -295,54 +310,41 @@ form {
 }
 
 .header-menu {
-  float: right;
-}
-
-.header-menu li {
-  font-size: 18px;
-  border-radius: 5px;
-  text-align: center;
-  float: left;
-  position: relative;
+  display: flex;
   list-style: none;
-  padding: 15px 8px;
-  margin-top: 15px;
-  transition: 0.3s ease-in;
 }
 
 .header-menu li a {
-  padding: 5px;
-}
-
-.header-menu li:hover {
-  background: rgb(8, 27, 43);
-  color: #0c2d48;
+  margin-top: 15px;
+  padding: 20px;
+  display: inline-block;
 }
 
 .header-menu li .dropdown {
-  border-radius: 5px;
-  border: 1px solid #0c2d48;
+  border: 1px solid #ddd;
   background-color: #fff;
   list-style: none;
   position: absolute;
   display: none;
-  float: none;
   z-index: 1;
+}
+
+.header-menu li:hover {
+  background-color: rgb(8, 27, 43);
+  border-radius: 5px;
+  transition: 0.5s;
 }
 
 .header-menu li .dropdown a {
   color: #333;
-  border: #0c2d48;
 }
 
 .header-menu li .dropdown li:hover a {
   color: #fff;
-  border: #0c2d48;
 }
 
 .header-menu li:hover .dropdown {
   display: block;
-  border: #0c2d48;
 }
 
 .banner {
@@ -416,6 +418,13 @@ form {
   padding: 5px;
 }
 
+.thumbnail-guru {
+  text-align: center;
+  height: 55px;
+  padding: 5px;
+  font-weight: bold;
+}
+
 .thumbnail-link {
   color: #333;
 }
@@ -441,9 +450,9 @@ footer {
 }
 
 .mobile-menu-btn {
+  height: 80px;
   width: 100%;
-  float: left;
-  padding: 10px;
+  padding: 25px;
   display: none;
   font-size: large;
 }
@@ -455,8 +464,8 @@ footer {
   top: 0;
   left: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.9);
-  z-index: 9999;
+  background-color: rgb(12, 45, 72, 0.9);
+  z-index: 1;
 }
 
 .box-menu-mobile span {
@@ -489,13 +498,36 @@ footer {
   height: 50px;
 }
 
+.profil-guru {
+  width: 600px;
+  padding: 10px;
+  font-size: medium;
+  font-size: larger;
+}
+
+.profil-guru tr {
+  height: 60px;
+}
+
 .border-tbl {
   border: 1px solid;
 }
 
-/*css mobile*/
+.back {
+  margin-left: 300px;
+  margin-bottom: 40px;
+  color: #000;
+  size: 30px;
+}
+
+.black {
+  color: #000;
+}
 
 @media screen and (max-width: 768px) {
+  .navbar-brand {
+    display: none;
+  }
   .container {
     width: 100%;
   }
@@ -508,9 +540,14 @@ footer {
     font-size: 14px;
   }
 
+  .thumbnail-guru {
+    font-size: 14px;
+  }
+
   .header-logo {
     line-height: 50px;
     padding-left: 10px;
+    padding-top: 5px;
   }
 
   .header-logo img {
@@ -535,13 +572,14 @@ footer {
   }
 
   .box-menu-mobile ul li:hover {
-    color: #000000;
+    color: #000 !important;
     background-color: #fff;
     transition: 0.3s ease-out;
   }
 
   .box-menu-mobile ul li a:hover {
     color: #000;
+    z-index: 1;
   }
 
   .border-tbl {
@@ -551,5 +589,30 @@ footer {
   .profil-tbl {
     width: 100%;
     margin: 5px;
+  }
+
+  .banner-text p {
+    font-size: 12px;
+  }
+
+  .banner-text h3 {
+    font-size: 14px;
+  }
+
+  .banner {
+    height: 300px;
+  }
+  img.kepsek {
+    width: 120px;
+  }
+
+  .kepsek p {
+    font-size: 14px;
+    text-align: inherit;
+  }
+
+  .tentang {
+    font-size: 14px;
+    text-align: justify;
   }
 }

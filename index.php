@@ -19,9 +19,9 @@
             <div class="section">
                 <div class="container text-center">
                     <h3>Sambutan Kepala Sekolah</h3>
-                    <img src="admin/uploads/identitas/<?= $d->foto_kepsek?>" width="200">
+                    <img class="kepsek" src="admin/uploads/identitas/<?= $d->foto_kepsek?>" width="200">
                     <h4><?= $d->nama_kepsek?></h4>
-                    <p><?= $d->sambutan_kepsek?></p>
+                   <div class="kepsek"><p><?= $d->sambutan_kepsek?></p></div>
                 </div>
             </div>
 

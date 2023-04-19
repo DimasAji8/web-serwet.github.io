@@ -12,7 +12,7 @@
              $p            = mysqli_fetch_object($informasi);
         
         ?>
-              <h3 class="text-center"><?=  $p->judul ?></h3>
+              <h3 class="text-center"><a href="guru.php" class="black"><?=  $p->judul ?></h3>
               <small>Dibuat pada <?= date('d/m/y', strtotime($p->created_at)) ?>, Oleh <?= $p->nama ?></small><br>
               <img src="admin/uploads/informasi/<?= $p->gambar ?>" width="65%" class="image" style="margin-top: 7px" ><br><br>
               <?= $p->keterangan?>

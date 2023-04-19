@@ -64,5 +64,25 @@
         echo "<script>window.location = 'informasi.php'</script>";
     }
 
+    if(isset($_GET['idguru'])){
+
+        $dirupload = "../admin/uploads/guru/";
+        $guru = mysqli_query($conn,"SELECT foto FROM guru WHERE id = '".$_GET['idguru']."'");
+
+        if(mysqli_num_rows($guru) > 0){
+
+            $p = mysqli_fetch_object($guru);
+
+            if(file_exists($dirupload.$p->foto)){
+
+                unlink($dirupload.$p->foto);
+            }
+        }
+
+        $delete = mysqli_query($conn,"DELETE FROM guru WHERE id = '".$_GET['idguru']."' ");
+        echo "<script>window.location = 'guru.php'</script>";
+    }
+    
+
 
 ?>
